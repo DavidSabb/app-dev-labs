@@ -18,7 +18,7 @@ class _MyNavigationState extends State<MyNavigation> {
   int _selectedIndex = 0;
   String dice1 = "asset/valueOne.png";
   String dice2 = "asset/valueTwo.png";
-
+  int sum = 0;
 
   List<String> _widgetOptions = [
     "asset/valueOne.png",
@@ -55,13 +55,21 @@ class _MyNavigationState extends State<MyNavigation> {
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      Random random = Random();
-                      int random1 = random.nextInt(6) + 1;
-                      int random2 = random.nextInt(6) + 1;
-                      dice1 = _widgetOptions[random1];
-                      dice2 = _widgetOptions[random2];
+                      setState(() {
+                        Random random = Random();
+                        int random1 = random.nextInt(6) + 1;
+                        int random2 = random.nextInt(6) +1;
+                        dice1 = _widgetOptions[random1];
+                        dice2 = _widgetOptions[random2];
+                        sum = _widgetOptions.indexOf(dice1) + _widgetOptions.indexOf(dice2) + 2;
+                      });
                     },
                     child: Text("roll dice!"))
+              ],
+            ),
+            Row(
+              children: [
+                Text("Sum: $sum")
               ],
             )
           ],
