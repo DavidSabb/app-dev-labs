@@ -26,7 +26,7 @@ class Xylophone extends StatelessWidget {
 
   void playSound(String soundNumber) {
     final player = AudioPlayer();
-    player.play(AssetSource('piano$soundNumber.wav'));
+    player.play(AssetSource('asset/piano-$soundNumber.mp3'));
   }
 
   Container buildKey({required Color color, required String key}) {
@@ -58,8 +58,8 @@ class Xylophone extends StatelessWidget {
             buildKey(color: Colors.yellow, key: "e"),
             buildKey(color: Colors.lightGreen, key: "f"),
             buildKey(color: Colors.green, key: "g"),
-            buildKey(color: Colors.blue, key: "c"),
-            buildKey(color: Colors.purple, key: "d"),
+            buildKey(color: Colors.blue, key: "a"),
+            buildKey(color: Colors.purple, key: "b"),
           ],
         ),
     );
