@@ -38,7 +38,7 @@ class Xylophone extends StatelessWidget {
         onPressed: () {
         playSound(key);
         },
-        child: const SizedBox.shrink(), // No text inside
+        child: const SizedBox.shrink(),
       ),
     );
   }

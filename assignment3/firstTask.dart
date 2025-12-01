@@ -63,16 +63,16 @@ class BMICalculatorState extends State<BMICalculator> {
                     },
                     child: Container(
                       height: 130,
-                      margin: const EdgeInsets.all(8),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: isMale ? Colors.purple : Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.male, color: Colors.white, size: 60),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 10),
                           const Text(
                             'MALE',
                             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -91,16 +91,16 @@ class BMICalculatorState extends State<BMICalculator> {
                     },
                     child: Container(
                       height: 130,
-                      margin: const EdgeInsets.all(8),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: !isMale ? Colors.purple : Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.female, color: Colors.white, size: 60),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 10),
                           const Text(
                             'FEMALE',
                             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
